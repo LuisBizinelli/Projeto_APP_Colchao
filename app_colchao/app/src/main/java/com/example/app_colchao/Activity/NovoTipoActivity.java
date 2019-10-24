@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.app_colchao.R;
-import com.example.app_colchao.model.Produto;
-import com.example.app_colchao.model.Tipo;
-import com.example.app_colchao.repository.Repository;
+import com.example.app_colchao.Model.Produto;
+import com.example.app_colchao.Model.Tipo;
+import com.example.app_colchao.Repository.Repository;
 
 public class NovoTipoActivity {
 
