@@ -12,14 +12,12 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import com.example.app_colchao.Model.Tipo;
 import com.example.app_colchao.R;
 //import com.example.app_colchao.adapter.TipoAdapter;
-import com.example.app_colchao.Model.Produto;
-//import com.example.app_colchao.Model.Tipo;
-import com.example.app_colchao.Repository.ProdutoRepository;
-import com.example.app_colchao.Repository.Repository;
-import com.example.app_colchao.adapter.TipoAdapter;
+import com.example.app_colchao.model.Produto;
+//import com.example.app_colchao.model.Tipo;
+import com.example.app_colchao.repository.ProdutoRepository;
+import com.example.app_colchao.repository.Repository;
 
 public class AtualizarProdutoActivity extends Activity {
     private EditText editTitulo, editAno;

@@ -12,14 +12,14 @@ import android.widget.TextView;
 import java.util.List;
 
 import com.example.app_colchao.R;
-import com.example.app_colchao.Model.Produto;
-import com.example.app_colchao.Model.Tipo;
+import com.example.app_colchao.model.Filme;
+import com.example.app_colchao.model.Genero;
 
 public class TipoAdapter extends ArrayAdapter<Tipo> {
 
     private int rId;
 
-    public TipoAdapter(Context context, int resource,List<Tipo> objects) {
+    public GeneroTipo(Context context, int resource,List<Tipo> objects) {
         super(context, resource, objects);
         rId = resource;
     }
