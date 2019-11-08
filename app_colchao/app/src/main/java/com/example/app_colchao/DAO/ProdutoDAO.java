@@ -1,15 +1,15 @@
 package com.example.app_colchao.DAO;
 
-import android.arch.persistence.room.Dao;
-import android.arch.persistence.room.Embedded;
-import android.arch.persistence.room.Insert;
-import android.arch.persistence.room.Query;
-import android.arch.persistence.room.Update;
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
+import androidx.room.Embedded;
 
 import java.util.List;
 
-import com.example.app_colchao.model.Filme;
-import com.example.app_colchao.model.Genero;
+import com.example.app_colchao.Model.Produto;
+import com.example.app_colchao.Model.Tipo;
 
 @Dao
 public interface ProdutoDAO {

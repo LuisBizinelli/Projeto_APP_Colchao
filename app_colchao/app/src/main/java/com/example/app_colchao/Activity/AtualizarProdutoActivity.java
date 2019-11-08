@@ -4,20 +4,23 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.app_colchao.Model.Produto;
+import com.example.app_colchao.Model.Tipo;
+import com.example.app_colchao.R;
+import com.example.app_colchao.Repository.Repository;
+import com.example.app_colchao.adapter.TipoAdapter;
+
 import java.util.List;
 
-import com.example.app_colchao.R;
 //import com.example.app_colchao.adapter.TipoAdapter;
-import com.example.app_colchao.model.Produto;
-//import com.example.app_colchao.model.Tipo;
-import com.example.app_colchao.repository.ProdutoRepository;
-import com.example.app_colchao.repository.Repository;
+//import com.example.app_colchao.Model.Tipo;
 
 public class AtualizarProdutoActivity extends Activity {
     private EditText editTitulo, editAno;
@@ -25,7 +28,7 @@ public class AtualizarProdutoActivity extends Activity {
     private RatingBar ratingProduto;
     private Repository repository;
     private Produto produto;
-    private TipoAdapter produtoAdapter;
+    private TipoAdapter tipoAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +57,7 @@ public class AtualizarProdutoActivity extends Activity {
     }
 
     private void loadProduto(long extra_id) {
-        produto = repository.getProdutoRepository().loadFilmeByID(extra_id);
+        produto = repository.getProdutoRepository().loadProdutoByID(extra_id);
         tipoAdapter = new TipoAdapter(this,android.R.layout.simple_spinner_item,repository.getTipoRepository().getAllTipos());
         spinnerTipo.setAdapter(tipoAdapter);
         editAno.setText(String.valueOf(produto.getAno_producao()));

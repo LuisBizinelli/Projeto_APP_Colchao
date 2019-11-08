@@ -6,9 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.app_colchao.Activity.MainActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:id="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnLogout"
+            android:text="@string/btnLogoutText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
     <Button
-        android:onClick="NovoPedido"
-        android:text="Novo Pedido"
+        android:onClick="NovoProduto"
+        android:text="Novo Colchão"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
@@ -22,10 +38,10 @@
         android:layout_height="wrap_content"
         android:text="Lista de Produtos:"
         />
+
     <ListView
         android:id="@+id/listaProdutos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="match_parent"></ListView>
 
 </LinearLayout>

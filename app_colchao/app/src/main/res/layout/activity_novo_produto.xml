@@ -24,14 +24,16 @@
     <EditText
         android:id="@+id/editAno"
         android:inputType="number"
-        android:hint="Ano de Produção"
+        android:hint="Quantidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
     <RatingBar
-        android:layout_gravity="center"
         android:id="@+id/ratingNotaProduto"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
     <Button
         android:text="Salvar"
         android:onClick="salvarProduto"

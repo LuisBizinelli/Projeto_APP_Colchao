@@ -1,9 +1,9 @@
 package com.example.app_colchao.Model;
 
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.ColumnInfo;
 
 @Entity(tableName = "tipo_table")
 public class Tipo {

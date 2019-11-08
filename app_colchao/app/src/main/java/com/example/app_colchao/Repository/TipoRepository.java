@@ -1,13 +1,11 @@
 package com.example.app_colchao.Repository;
 
 import android.content.Context;
-import android.os.AsyncTask;
 
 import java.util.List;
 
 import com.example.app_colchao.DAO.TipoDAO;
-import com.example.app_colchao.DataBase.ProdutoRoomDatabase;
-import com.example.app_colchao.Model.Produto;
+import com.example.app_colchao.DataBase.AppRoomDataBase;
 import com.example.app_colchao.Model.Tipo;
 
 public class TipoRepository {
@@ -15,7 +13,7 @@ public class TipoRepository {
     private List<Tipo> mTipos;
 
     public TipoRepository(Context context){
-        ProdutoRoomDatabase db = ProdutoRoomDatabase.getDatabase(context);
+        AppRoomDataBase db = AppRoomDataBase.getDatabase(context);
         mTipoDAO = db.tipoDAO();
     }
 

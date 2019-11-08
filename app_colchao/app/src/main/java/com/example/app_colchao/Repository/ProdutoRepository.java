@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 import java.util.List;
 
 import com.example.app_colchao.DAO.ProdutoDAO;
-import com.example.app_colchao.DataBase.ProdutoRoomDatabase;
+import com.example.app_colchao.DataBase.AppRoomDataBase;
 import com.example.app_colchao.Model.Produto;
 
 public class ProdutoRepository {
@@ -15,7 +15,7 @@ public class ProdutoRepository {
     private List<ProdutoDAO.ProdutoJoin> mProdutosJoin;
 
     public ProdutoRepository(Context context){
-        ProdutoRoomDatabase db = ProdutoRoomDatabase.getDatabase(context);
+        AppRoomDataBase db = AppRoomDataBase.getDatabase(context);
         mProdutoDAO = db.produtoDAO();
     }
 
@@ -30,7 +30,7 @@ public class ProdutoRepository {
     }
 
     public Produto loadProdutoByID(long ID) {
-        return mProdutoDAO.loadFilmeByID(ID);
+        return mProdutoDAO.loadProdutoByID(ID);
     }
 
     public void insert(Produto produto){
